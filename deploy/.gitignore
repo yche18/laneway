@@ -1,0 +1,6 @@
+.env
+app.jar
+laneway.sql
+frontend/
+images/
+*.tar.gz
