@@ -1,0 +1,237 @@
+{
+  "generatedAt": "2026-10-30T08:08:52.163811+11:00",
+  "scope": "Isolated Docker backend regression after source metadata and seed date alignment, against laneway_test. Frontend results are retained from the prior report; this is not a visitor-triggered test run.",
+  "tests": 91,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "suites": [
+    {
+      "name": "com.laneway.analytics.BehaviorAggregationIntegrationTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.analytics.KafkaBehaviorIntegrationTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.cache.CacheBenchmarkIntegrationTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.cache.CacheCdcIntegrationTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.cache.CacheChangeProjectorTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.cache.CacheLayersIntegrationTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.cache.CacheReadTraceTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.cache.CanalBatchTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.cache.RequestCacheScopeTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.experience.ExperienceIntegrationTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.experience.ExperienceServiceTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.MapperArchitectureTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.messaging.MessagingIntegrationTest",
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.messaging.RocketMqIntegrationTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.MockPaymentTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.reliability.AccessGuardTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.reliability.CacheConcurrencyTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.reliability.LoginCodeTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.reliability.ReliabilityIntegrationTest",
+      "tests": 19,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.reliability.SeckillMessageTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.ShopCacheCompatibilityTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.ShopSearchBoundaryTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.UserLogoutTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.laneway.VoucherOrderReliabilityTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "checkstylePassed": true,
+  "frontend": {
+    "tests": 12,
+    "failures": 0,
+    "skipped": 0,
+    "syntaxPassed": true,
+    "sourceReportGeneratedAt": "2026-10-29T12:49:50.558302+00:00",
+    "rerunInThisPass": false
+  },
+  "build": {
+    "java": "8",
+    "artifact": "laneway-0.0.1-SNAPSHOT.jar",
+    "mavenPackagePassed": true,
+    "sha256": "25bdd40618835f79100220a0e13d712513b6a8dd71296ac83b62d42c28fb1243"
+  },
+  "commands": {
+    "backend": "docker compose -p laneway-migration-test -f dev/docker-compose.test.yml run --rm test",
+    "frontend": "node --test frontend/tests/api.test.js frontend/tests/experience.test.js",
+    "syntax": "npm --prefix frontend run check",
+    "package": "mvn -B -DskipTests package"
+  },
+  "features": [
+    {
+      "feature": "Cache and CDC",
+      "boundary": "Concurrent loads, invalidation and Canal updates are tested in an isolated environment; performance is workload-specific."
+    },
+    {
+      "feature": "Messaging and analytics",
+      "boundary": "The suite exercises delivery leases, consumer deduplication, RocketMQ and Kafka aggregation; it is not a multi-region availability test."
+    },
+    {
+      "feature": "Voucher orders",
+      "boundary": "Tests cover ownership, idempotency, reservations and compensation. Real payment, SMS delivery and refunds are not integrated."
+    }
+  ],
+  "limitations": [
+    "Initial shop image files are not bundled.",
+    "No external deployment or browser-driven visual acceptance was performed in this run."
+  ],
+  "runHistory": [
+    {
+      "attempt": 1,
+      "tests": 91,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "failedTest": "com.laneway.cache.CacheCdcIntegrationTest.externalSqlWarmsCurrentValueAndMakesOldMemcacheNamespaceUnreachable"
+    },
+    {
+      "attempt": 2,
+      "tests": 91,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "observations": [
+    "The first full run failed one CDC shared-cache assertion; an unchanged full rerun passed all 91 tests. Review found an existing invalidation/warming timing window consistent with the failure, without proving a unique cause. No business code or assertions were changed."
+  ]
+}

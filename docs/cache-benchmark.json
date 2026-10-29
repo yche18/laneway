@@ -1,0 +1,34 @@
+{
+  "generated_at" : "2026-10-29T21:05:31.297Z",
+  "endpoint" : "GET /shop/1",
+  "requests_per_phase" : 10000,
+  "concurrency" : 8,
+  "warmup_per_phase" : 200,
+  "environment" : "Linux amd64, Java 1.8.0_504",
+  "cpu_available_to_jvm" : 16,
+  "jvm_max_heap_bytes" : 477626368,
+  "database" : "8.0.46",
+  "baseline" : {
+    "successes" : 10000,
+    "errors" : 0,
+    "duration_seconds" : 5.120980295,
+    "qps" : 1952.7511187191553,
+    "p50_ms" : 3.401907,
+    "p95_ms" : 8.92733,
+    "p99_ms" : 13.903316,
+    "measured_mysql_detail_loads" : 10000.0,
+    "cold_request_mysql_detail_loads" : 1.0
+  },
+  "optimized" : {
+    "successes" : 10000,
+    "errors" : 0,
+    "duration_seconds" : 1.302425852,
+    "qps" : 7677.980273997202,
+    "p50_ms" : 0.774907,
+    "p95_ms" : 2.257511,
+    "p99_ms" : 4.874172,
+    "measured_mysql_detail_loads" : 0.0,
+    "cold_request_mysql_detail_loads" : 1.0
+  },
+  "scope" : "Isolated Docker MySQL 8 / Redis 7 / Memcached 1.6. One Java instance; warm hot-key HTTP test, not a production capacity claim."
+}
